@@ -54,6 +54,10 @@
                         <li class="nav-item">
                             <a href="/sobre" class="nav-link" href="#">Sobre</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="/events/pessoa" class="nav-link" href="#">Pessoa</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>

@@ -4,43 +4,57 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// Usa o modelo do Evento
+use App\Models\Evento;
+
 class EventController extends Controller
 {
-    public function index(){
+    public function index()
+    {
+        // Retorna todos os registros
+        $eventos = Evento::all();
 
-        $nome = "Hueliton Luis Bagio";
-        $idade = 32;
-        $arrNomes = ["Dora","Mel","Jady","Sindy"];
-
-        return view('welcome',
-            [
-                'nome' => $nome,
-                'idade' => $idade,
-                'profissao' => 'Programador',
-                'arrNomes' => $arrNomes
-            ]);
+        //Retorna para View as informações
+        return view('welcome', ['eventos' => $eventos]);
     }
 
+    public function store(Request $request)
+    {
+        $evento = new Evento;
 
-public function create(){
+        $evento->titulo = $request->titulo;
+        $evento->cidade = $request->cidade;
+        $evento->privado = $request->privado;
+        $evento->descricao = $request->descricao;
 
-    return view('events.create');
-}
+        $evento->save();
 
-public function sobre(){
-    return view('sobre');
-}
+        return redirect('/');
+    }
 
-public function listaEvents(){
-    return view('events.listaEvents');
-}
+    public function create()
+    {
 
-public function login(){
-    return view('events.login');
-}
+        return view('events.create');
+    }
 
-public function usuCadastro(){
-    return view('events/usuCadastro');
-}
+    public function sobre()
+    {
+        return view('sobre');
+    }
 
+    public function listaEvents()
+    {
+        return view('events.listaEvents');
+    }
+
+    public function login()
+    {
+        return view('events.login');
+    }
+
+    public function usuCadastro()
+    {
+        return view('events/usuCadastro');
+    }
 }

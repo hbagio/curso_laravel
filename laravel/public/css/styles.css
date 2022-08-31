@@ -1,13 +1,147 @@
-h1{
-    color: red;
-}
+
 *{
     font-family: 'Roboto';
 }
 
 #navbar img{
-    width: 50px;
+    width: 40px;
+
+}
+
+#event-create-container{
+    padding: 50px;
+
+
+}
+
+#event-create-container label{
+    font-weight: bold;
+
+}
+
+#navbar {
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 5px 0;
+
+}
+
+#navbar a {
+   font-size: 14px;
+   color: #757575;
+
+
+}
+#navbar a:hover {
+
+    color: #f2a340;
+
+ }
+
+ #search-container{
+    background-image: url("../img/organizacaodeventos-1024x538.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    padding: 40px;
+    text-align: center;
+ }
+
+
+
+body{
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.row{
+    margin: 0 ;
+
+}
+.btn-primary{
+    background-color: #f2a340;
+    border: 2px solid #c28008;
+
+}
+.btn-primary:hover{
+    background-color: #c28008;
+    border: 2px solid #c28008;
+}
+
+.container-fluid{
+    padding: 0;
+}
+
+
+#search-container h1{
+    color: blueviolet;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+#search-container form{
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+#events-container{
+    padding: 50px;
+
+}
+
+#events-container h2{
+    margin-bottom: 10px;
+
+}
+
+#events-container .subtitle{
+    color: #757575;
+    margin-bottom: 30px;
+
+
+}
+
+#card-container{
+    display: flex;
+}
+
+#events-container card{
+    flex: 1 1 0;
+    max-width: 25%;
+    border-radius: 10px;
+    padding: 0;
+    margin: 5px;
+}
+
+
+#events-container img{
+
+    max-height: 150px;
+    border-radius: 10px;
+}
+
+.card .card-title{
+    color: #212121;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 35px;
 
 }
 
 
+
+footer{
+   text-align: center;
+   padding: 10px;
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   background-color: #757575;
+}
