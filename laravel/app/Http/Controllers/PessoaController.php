@@ -12,15 +12,9 @@ class PessoaController extends Controller
 
     public function pessoa()
     {
-        return view('events.pessoa');
-    }
+        $pessoas = Pessoa::all();
 
-    public function listaPessoa()
-    {
-        $pessoa = Pessoa::all();
-
-        return view('events/pessoa', ['pessoas' => $pessoa ]);
-
+        return view('events.pessoa', ['pessoas' => $pessoas ]);
     }
 
 
@@ -34,7 +28,7 @@ class PessoaController extends Controller
 
         $pessoa->save();
 
-        return redirect('events/listaPessoa');
+        return redirect('events/pessoa');
 
     }
 

@@ -21,15 +21,15 @@
         <div id="cards-container" class="row">
             @foreach ($eventos as $evento)
                 <div class="card col-md-3">
-                    <img id="img_evento" src="/img/eventos.jpg" alt="{{ $evento->titulo}}">
+                    {{-- Busca imagem correspondente na parta imagem --}}
+                    <img id="img_evento" src="/img/events/{{ $evento->imagem }}" alt="{{ $evento->titulo }}">
                     <div class="card-body">
-                        <p class="card-date">13/08/2022</p>
-                        <h5 class="card-title">{{ $evento->titulo}}</h5>
-                        <p class="card-participants"> X Participantes</p>
-                        <a href="#" class="btn btn-primary">Saber Mais</a>
+                        <h5 class="card-title">{{ $evento->titulo }}</h5>
+                        <a href="/events/{{ $evento->id }}" class="btn btn-dark btn-sm">Saber Mais</a>
 
                     </div>
                 </div>
+
             @endforeach
 
         </div>
