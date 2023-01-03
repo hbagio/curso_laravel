@@ -21,6 +21,7 @@
             <input type="submit" class="btn btn-primary" value="Cadastrar">
             <br>
             <table class="table">
+                
             <thead>
                 <tr>
                     <th scope="col">Código</th>
