@@ -33,7 +33,7 @@
                     <ion-icon name="people-outline"></ion-icon>
                     Dono do Evento
                 </p>
-                <p>O evento conta com:</p>
+                <p>O evento conta com os seguintes itens:</p>
                 <ul id="items-list">
                     @foreach ($evento->items as $item )
                         <li><ion-icon name="play-outline"></ion-icon><span> {{$item}}</span></li>
